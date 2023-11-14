@@ -11,7 +11,7 @@ char *read_user_input()
 	char *input = NULL;
 	size_t input_size = 0;
 
-	if (getline(&input, &input_size, stdin) == -1)
+	if (_getline(&input, &input_size, stdin) == -1)
 	{
 		perror("Error reading user input");
 		exit(EXIT_FAILURE);

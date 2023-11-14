@@ -12,8 +12,8 @@
 #include <limits.h>
 
 #define MAX_INPUT_SIZE 1024
+#define SIZE 128
 extern char **environ;
-
 
 
 /**
@@ -43,12 +43,11 @@ void comsep(char *args[]);
 void interactive(void);
 char *read_stream(FILE *file);
 void non_interactive(void);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 
 /* Prototypes for built-in functions */
 void exit_shell(char **args);
 void print_environment(char **args);
 void change_directory(char **args);
-
-
 
 #endif /* SHELL_H_ */
