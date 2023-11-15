@@ -19,7 +19,7 @@ char **parse_command(char *input)
 		perror("Error allocating memory for tokens");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(input, " \n");
+	token = _strtok(input, " \n");
 
 	while (token != NULL)
 	{
@@ -30,7 +30,7 @@ char **parse_command(char *input)
 			exit(EXIT_FAILURE);
 		}
 		token_count++;
-		token = strtok(NULL, " \n");
+		token = _strtok(NULL, " \n");
 	}
 	tokens[token_count] = NULL;
 	return (tokens);

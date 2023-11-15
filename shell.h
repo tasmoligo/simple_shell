@@ -44,6 +44,8 @@ void interactive(void);
 char *read_stream(FILE *file);
 void non_interactive(void);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+char *_strchr(char *s, char c);
+char *_strtok(char *str, char *delim);
 
 /* Prototypes for built-in functions */
 void exit_shell(char **args);
