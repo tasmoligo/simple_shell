@@ -12,7 +12,7 @@ char *find_executable(char *command)
 {
 	char *path = getenv("PATH");
 	char *path_copy = strdup(path);
-	char *path_token = strtok(path_copy, ":");
+	char *path_token = _strtok(path_copy, ":");
 
 	if (access(command, F_OK | X_OK) == 0)
 	{
@@ -29,7 +29,7 @@ char *find_executable(char *command)
 			free(path_copy);
 			return (strdup(executable_path));
 		}
-		path_token = strtok(NULL, ":");
+		path_token = _strtok(NULL, ":");
 	}
 	free(path_copy);
 	return (NULL);
